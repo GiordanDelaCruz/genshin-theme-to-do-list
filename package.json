@@ -1,0 +1,16 @@
+{
+  "name": "genshin-to-do-list",
+  "version": "1.0.0",
+  "description": "A to-do list application with a genshin inspired aesthetic",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Giordan Andrew",
+  "license": "ISC",
+  "dependencies": {
+    "date-and-time": "^3.0.3",
+    "morgan": "^1.10.0"
+  }
+}

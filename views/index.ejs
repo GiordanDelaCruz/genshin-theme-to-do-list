@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+</head>
+<body>
+
+    <!-- Display current date -->
+    <h1> <%= currentDate %> </h1>
+
+    <!-- Menu to add items -->
+    <h1>Add new item</h1>
+    <form action="/updatedList " method="POST">
+        <input type="text" name="listItem" placeholder="New Item"  required>
+        <input type="submit">
+    </form>
+
+    <!-- Display list of current items -->
+    <ul>
+        <% if( locals.toDoList ){ %>
+            <% for(let i =0; i < toDoList.length; i++){ %>
+                <li> <%= toDoList[i] %></li>
+            <% } %>
+        <% }else{ %>
+            <li>No items at the moment</li>
+        <% } %>    
+    </ul>
+
+</body>
+<footer>
+    <p>&copy; Copyright <%= new Date().getFullYear() %> GiordanAndrew</p>
+</footer>
+</html>
