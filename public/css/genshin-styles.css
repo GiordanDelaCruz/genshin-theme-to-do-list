@@ -1,0 +1,74 @@
+/******************************************************************/
+/**********             Ganyu Color Theme              ************/
+/******************************************************************/
+/* Text Colors */
+.text-ganyu-light-blue{
+    color: 	#a4b6ef;
+}
+.text-ganyu-pastel-blue{
+    color: 	#d9eeff;
+}
+.text-ganyu-dark-blue{
+    color: 	#596cd5;
+}
+.text-ganyu-light-red{
+    color: 	#e65965;
+}
+.text-ganyu-light-yellow{
+    color: 	#feecc5;
+}
+
+/* Background Colors */
+.bg-ganyu-light-blue{
+    background-color: #596cd5;
+}
+.bg-ganyu-pastel-blue{
+    background-color: #d9eeff;
+}
+.bg-ganyu-dark-blue{
+    background-color: #596cd5;
+}
+.bg-ganyu-light-red{
+    background-color: #e65965;
+}
+.bg-ganyu-light-yellow{
+    background-color: #feecc5;
+}
+
+
+/******************************************************************/
+/*******              Wanderer Color Theme               **** *****/
+/******************************************************************/
+/* Text Colors */
+.text-wanderer-pastel-blue{
+    color: 	#c3c1f9;
+}
+.text-wanderer-grey-blue-1{
+    color: 	#a5abd6;
+}
+.text-wanderer-grey-blue-2{
+    color: 	#7f80a7;
+}
+.text-wanderer-grey-blue-3{
+    color: 	#686589;
+}
+.text-wanderer-grey-blue-4{
+    color: 	#4c4b67;
+}
+
+/* Background Colors */
+.bgg-wanderer-pastel-blue{
+    background-color: #c3c1f9;
+}
+.bg-wanderer-grey-blue-4{
+    background-color: #a5abd6;
+}
+.bg-wanderer-grey-blue-4{
+    background-color: #7f80a7;
+}
+.bg-wanderer-grey-blue-4{
+    background-color: #686589;
+}
+.bg-wanderer-grey-blue-4{
+    background-color: #4c4b67;
+}
