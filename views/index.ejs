@@ -18,24 +18,30 @@
     <link rel="stylesheet" href="/css/genshin-styles.css">
     <link rel="stylesheet" href="/css/ga-style.css">
 </head>
-<body>
+<body class="bg-ganyu-dark-blue">
 
     <!-- To-do List Menu -->
     <section>
-        <div class="container-fluid bg-ganyu-pastel-blue pt-5">
+        <div class="container-fluid bg-ganyu-pastel-blue py-5">
             <div class="row">
                 <div class="col-lg-6">
                       <!-- Other Menu -->
                     <!-- <div class="menu-container">
-                        <h2 class="menu-header text-ganyu-dark-blue d-inline">Change Theme</h2>
+                        <h2 class="menu-header bg-ganyu-dark-blue text-white d-inline">Change Theme</h2>
                     </div> -->
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn bg-ganyu-light-blue text-white">Ganyu</button>
-                        <button type="button" class="btn bg-wanderer-grey-blue-1 text-white">Wanderer</button>
+                        <button type="button" class="btn ganyu-theme-btn bg-ganyu-light-blue text-white">Ganyu</button>
+                        <button type="button" class="btn wanderer-theme-btn bg-wanderer-grey-blue-1 text-white">Wanderer</button>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <p class="character-quote">"We're way behind schedule..."</p>
+                    <p class="character-quote text-ganyu-dark-blue">"We're way behind schedule..."
+                        <img class="chibi-character" src="images/ganyu-chibi-4.png" alt="">
+                    </p>
+                    
+                    <!-- <div class="genshin-art-box">
+                        <img class="chibi-character" src="images/ganyu-chibi-1.png" alt="">
+                    </div> -->
                 </div>
             </div>
             <div class="row text-center">
@@ -53,17 +59,18 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-5">
                     <!-- Menu to add items -->
-                    <div class="menu-container">
-                        <h2 class="menu-header text-ganyu-dark-blue">Add New Item</h2>
+                    <div class="menu-container text-center">
+                        <h2 class="menu-header bg-ganyu-dark-blue text-white">Options</h2>
+                        <img class="chibi-character" src="images/ganyu-chibi-3.png" alt="">
                     </div>
                     
                     <form action="/updatedList " method="POST">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <div class="input-group-text bg-ganyu-light-yellow">
-                                    <input class="add-item-btn bg-ganyu-light-yellow" type="submit">
+                                    <input class="add-item-btn bg-ganyu-light-yellow" type="submit" value="Add">
                                 </div>
                             </div>
                             <input type="text" class="form-control" name="listItem" placeholder="New Item"  required aria-label="Text input with checkbox">
@@ -71,33 +78,28 @@
                     </form>
 
                     <!-- Clear list -->
-                    <div class="menu-container">
-                        <h2 class="menu-header text-ganyu-dark-blue">Clear List</h2>
-                    </div>
-                    <button type="button" class="btn bg-ganyu-light-yellow btn-lg">Clear List</button>
-                    
-
+                    <button type="button" class="btn bg-ganyu-light-yellow">Clear List</button>
+                
                     <!-- Genshin Chibi Art -->
-                    <div class="genshin-art-box">
+                    <!-- <div class="genshin-art-box">
                         <img class="chibi-character" src="images/ganyu-chibi-1.png" alt="">
-                    </div>
+                    </div> -->
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-7">
                     <!-- Display list of current items -->
-                    <h2 class="menu-header text-ganyu-dark-blue">To-do List</h2>
+                    <div class="menu-container text-center">
+                        <h2 class="menu-header bg-ganyu-dark-blue text-white">To-do List</h2>
+                        <img class="chibi-character" src="images/ganyu-chibi-5.png" alt="">
+                    </div>
+                    
                         <% if( locals.toDoList ){ %>
                             <% for(let i =0; i < toDoList.length; i++){ %>
-                                <!-- <input type="checkbox" name="">
-                                <label for=""><%= toDoList[i] %></label>
-                                <br> -->
-
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text bg-ganyu-light-yellow">
                                             <input type="checkbox" aria-label="Checkbox for following text input">
                                         </div>
                                     </div>
-                                    <!-- <input type="text" class="form-control" aria-label="Text input with checkbox"> -->
                                     <label for="" class="form-control"><%= toDoList[i] %></label>
                                 </div>
 
@@ -111,7 +113,6 @@
                                         <input type="checkbox" aria-label="Checkbox for following text input">
                                     </div>
                                 </div>
-                                <!-- <input type="text" class="form-control" aria-label="Text input with checkbox"> -->
                                 <label for="" class="form-control">No items at the moment</label>
                             </div>
                         <% } %>    
@@ -120,7 +121,8 @@
         </div>
 
     </section>
-   
+    
+    <script src="/scripts/index.js" ></script>
 
 </body>
 
@@ -133,6 +135,5 @@
             </div>
         </div>
     </div>
-    <!-- <p>&copy; Copyright <%= new Date().getFullYear() %> GiordanAndrew</p> -->
 </footer>
 </html>
