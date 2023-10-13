@@ -2,12 +2,17 @@ body{
     font-family: 'Montserrat', sans-serif;
     padding: 0;
     margin: 0;;
-    cursor: url('../images/ganyu-chibi-1.png'), url('../images/ganyu-chibi-1.png'), auto;
+    cursor: url('/images/ganyu-chibi-1.png'), url('/images/ganyu-chibi-1.png'), auto;
 }
 
 .container-fluid{
     padding: 0 5rem;
 }
+
+.character-quote-container{
+    display: inline-block;
+    text-align: right;
+}   
 
 .date-header{
     margin: 4rem auto 5rem;
@@ -31,14 +36,21 @@ body{
 .add-item-btn{
     border: 0;
 }
+.input-group-prepend, 
+.btn{
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
 
 .character-quote{
+    display: inline-block;
     font-size: 2rem;
     font-family: 'Caveat', cursive;
     text-align: right;
 }
 
 .chibi-character{
+    display: inline-block;
     width: 5.5rem;
 }
 

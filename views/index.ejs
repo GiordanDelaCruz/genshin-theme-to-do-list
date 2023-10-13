@@ -24,17 +24,20 @@
     <section>
         <div class="container-fluid main-container bg-ganyu-pastel-blue py-5">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-3">
                       <!-- Other Menu -->
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <button onclick="ganyuTheme()" type="button" class="btn bg-ganyu-light-blue text-white">Ganyu</button>
                         <button onclick="wandererTheme()" type="button" class="btn bg-wanderer-grey-blue-1 text-white">Wanderer</button>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <p class="character-quote text-ganyu-dark-blue">"We're way behind schedule..."
+                <div class="col-lg-5 offset-lg-4">
+                    <div class="character-quote-container">
+                        <p class="character-quote text-ganyu-dark-blue">
+                            "We're way behind schedule..."
+                        </p>
                         <img class="chibi-character" src="images/ganyu-chibi-4.png" alt="">
-                    </p>
+                    </div> 
                 </div>
             </div>
             <div class="row text-center">
@@ -54,16 +57,21 @@
                     <form action="/updatedList " method="POST">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <div class="input-group-text bg-ganyu-light-yellow">
-                                    <input class="add-item-btn bg-ganyu-light-yellow" type="submit" value="Add">
-                                </div>
+                                <!-- <div class="input-group-text bg-ganyu-light-yellow"> -->
+                                    <!-- <input class="add-item-btn bg-ganyu-light-yellow" type="submit" value="Add"> -->
+                                <!-- </div> -->
+                                <input class="btn input-group-text bg-ganyu-light-yellow text-black" type="submit" name="" id="" value="Add">
+                                <!-- <button type="button" class="btn bg-ganyu-light-yellow">Add</button> -->
                             </div>
                             <input type="text" class="form-control" name="listItem" placeholder="New Item"  required aria-label="Text input with checkbox">
                         </div>
                     </form>
 
                     <!-- Clear list -->
-                    <button type="button" class="btn bg-ganyu-light-yellow">Clear List</button>
+                    <form action="/clearList" method="POST">
+                        <button class="btn bg-ganyu-light-yellow text-black" type="submit">Clear List</button>
+                    </form>
+                   
                 </div>
                 <div class="col-lg-7">
                     <!-- Display list of current items -->
@@ -87,14 +95,14 @@
                                 <!-- <li> <%= toDoList[i] %></li> -->
                             <% } %>
                         <% }else{ %>
-                            <div class="input-group mb-3">
+                            <!-- <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text bg-ganyu-light-yellow">
                                         <input type="checkbox" aria-label="Checkbox for following text input">
                                     </div>
                                 </div>
                                 <label for="" class="form-control">No items at the moment</label>
-                            </div>
+                            </div> -->
                         <% } %>    
                 </div>
             </div>

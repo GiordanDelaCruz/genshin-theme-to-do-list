@@ -43,6 +43,18 @@ app.post("/updatedList", (req, res) => {
     });
 });
 
+// POST: Clear all items
+app.post("/clearList", (req, res) => {
+    toDoList = [];
+    
+    // DEBUGGING
+    console.log(toDoList);
+    res.render("index.ejs", {
+        currentDate: currentDate, 
+        toDoList: toDoList
+    });
+});
+
 /***********************************************************/
 /******              Start Server                     ******/
 /***********************************************************/
