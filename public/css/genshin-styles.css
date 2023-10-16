@@ -40,35 +40,29 @@
 /*******              Wanderer Color Theme               **** *****/
 /******************************************************************/
 /* Text Colors */
-.text-wanderer-pastel-blue{
-    color: 	#c3c1f9;
+.text-wanderer-teal{
+    color: #72b5c5;
 }
-.text-wanderer-grey-blue-1{
-    color: 	#a5abd6;
+.text-wanderer-light-purple{
+    color: #cdc7f7;
 }
-.text-wanderer-grey-blue-2{
-    color: 	#7f80a7;
+.text-wanderer-royal-blue{
+    -color: #224c94;
 }
-.text-wanderer-grey-blue-3{
-    color: 	#686589;
-}
-.text-wanderer-grey-blue-4{
-    color: 	#4c4b67;
+.text-wanderer-beige{
+    color: #fdd69c;
 }
 
 /* Background Colors */
-.bg-wanderer-pastel-blue{
-    background-color: #c3c1f9;
+.bg-wanderer-teal{
+    background-color: #72b5c5;
 }
-.bg-wanderer-grey-blue-1{
-    background-color: #a5abd6;
+.bg-wanderer-light-purple{
+    background-color: #cdc7f7;
 }
-.bg-wanderer-grey-blue-2{
-    background-color: #7f80a7;
+.bg-wanderer-royal-blue{
+    background-color: #224c94;
 }
-.bg-wanderer-grey-blue-3{
-    background-color: #686589;
-}
-.bg-wanderer-grey-blue-4{
-    background-color: #4c4b67;
+.bg-wanderer-beige{
+    background-color: #fdd69c;
 }
