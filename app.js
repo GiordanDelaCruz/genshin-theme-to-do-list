@@ -4,7 +4,7 @@ import morgan from "morgan";
 import date from "date-and-time";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 
 var toDoList = [];
