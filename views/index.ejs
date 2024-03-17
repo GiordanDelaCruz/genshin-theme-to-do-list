@@ -1,7 +1,6 @@
 <%- include("partials/header.ejs") %>
 
 <body class="">
-
     <!-- To-do List Menu -->
     <section>
         <div class="container-fluid main-container py-5">
@@ -41,7 +40,7 @@
                             <div class="input-group-prepend">
                                 <input class="btn input-group-text text-black" type="submit" name="" id="" value="Add">
                             </div>
-                            <input type="text" class="form-control" name="listItem" placeholder="New Item"  required aria-label="Text input with checkbox">
+                            <input type="text" class="form-control" name="itemTitle" placeholder="New Item"  required aria-label="Text input with checkbox">
                         </div>
                     </form>
 
@@ -60,28 +59,31 @@
                     
                         <% if( locals.toDoList ){ %>
                             <% for(let i =0; i < toDoList.length; i++){ %>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text ">
-                                            <input type="checkbox" aria-label="Checkbox for following text input">
+                                <form method="post">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <!-- Delete Task -->
+                                            <button id="delete-btn-<%= toDoList[i].id %>" formaction="/delete" type="submit" class="form-btn delete-btn input-group-text bg-danger text-white">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </button>
+                                            <!-- Complete Task -->
+                                            <button id="done-btn-<%= toDoList[i].id %>" formaction="/edit" type="submit" class="form-btn done-btn input-group-text bg-success text-white">
+                                                <i class="fa-solid fa-check"></i>
+                                            </button>
+                                            <!-- Edit Task -->
+                                            <button id="edit-btn-<%= toDoList[i].id %>" onclick="editItem('<%= toDoList[i].id %>')" type="button" class="form-btn edit-btn input-group-text">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </button>
                                         </div>
+                                       <!-- Item Properties -->
+                                       <input hidden name="itemId" value="<%= toDoList[i].id %>" >
+                                       <input id="edit-input-<%= toDoList[i].id %>" name="updatedTitle" type="text" class="form-control edit-input" value="<%= toDoList[i].title %>" required>
+                                       <label id="item-display-<%= toDoList[i].id %>" for="" class="form-control item-display"><%= toDoList[i].title %></label>
                                     </div>
-                                    <label for="" class="form-control"><%= toDoList[i] %></label>
-                                </div>
-
-
-                                <!-- <li> <%= toDoList[i] %></li> -->
+                                </form>
+                              
                             <% } %>
-                        <% }else{ %>
-                            <!-- <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text bg-ganyu-light-yellow">
-                                        <input type="checkbox" aria-label="Checkbox for following text input">
-                                    </div>
-                                </div>
-                                <label for="" class="form-control">No items at the moment</label>
-                            </div> -->
-                        <% } %>    
+                        <% } %>
                 </div>
             </div>
         </div>

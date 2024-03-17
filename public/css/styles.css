@@ -2,7 +2,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     padding: 0;
     margin: 0;;
-    cursor: url('/images/ganyu-chibi-1.png'), url('/images/ganyu-chibi-1.png'), auto;
+    cursor: url('../images/ganyu-chibi-1.png'), url('/images/ganyu-chibi-1.png'), auto;
 }
 
 .container-fluid{
@@ -36,6 +36,32 @@ body{
 .add-item-btn{
     border: 0;
 }
+
+.delete-btn, .done-btn{
+    opacity: 0.5;
+}
+
+button.delete-btn:hover, button.done-btn:hover{
+    opacity: 1;
+}
+
+.edit-btn{
+
+}
+
+.done-btn, .edit-input{
+    display: none;
+}
+
+.form-btn{
+    /* background-color: DodgerBlue; Blue background */
+    /* border: none; Remove borders */
+    /* color: white; White text */
+    /* padding: 12px; Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+
 .input-group-prepend, 
 .btn{
     border: 1px solid #ced4da;

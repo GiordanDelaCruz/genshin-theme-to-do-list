@@ -5,6 +5,9 @@
 .text-ganyu-light-blue{
     color: 	#a4b6ef;
 }
+.text-ganyu-light-blue-2{
+    color: #cadbf5;
+}
 .text-ganyu-pastel-blue{
     color: 	#d9eeff;
 }
@@ -22,8 +25,14 @@
 .bg-ganyu-light-blue{
     background-color: #596cd5;
 }
+.bg-ganyu-light-blue-2{
+    background-color: #0666f8;
+}
 .bg-ganyu-pastel-blue{
     background-color: #d9eeff;
+}
+.bg-ganyu-pastel-blue-2{
+    background-color:#aebce8;
 }
 .bg-ganyu-dark-blue{
     background-color: #596cd5;

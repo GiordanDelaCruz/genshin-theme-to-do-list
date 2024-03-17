@@ -29,6 +29,22 @@ const wandererQuotes = [
     `"Prepare yourself for punishment."`, 
 ];
 
+$(document).ready(function(){ 
+    // $(".date-header").addClass("bg-ganyu-light-red")
+
+ 
+});
+
+function editItem(id){
+    // Hide display
+    $("#delete-btn-" + id).hide(1000);
+    $("#edit-btn-" + id).hide(1000);
+    $("#item-display-" + id).hide(1000);
+    // Show edit inputs
+    $("#done-btn-" + id).show(2000);
+    $("#edit-input-" + id).show(2000);
+}
+
 // Turn on correct theme at the start
 updateTheme();
 
@@ -48,7 +64,7 @@ function ganyuTheme(){
 
     // Change main container color
     mainContainer[0].classList.remove("bg-wanderer-light-purple");
-    mainContainer[0].classList.add("bg-ganyu-pastel-blue");
+    mainContainer[0].classList.add("bg-ganyu-pastel-blue-2");
 
     // Change background color of input rectangles
     for(var i = 0; i < inputRectangles.length; i ++){
@@ -72,7 +88,7 @@ function ganyuTheme(){
       footer[0].classList.remove("bg-wanderer-teal");
 
       // Change body
-      body[0].classList.add("bg-ganyu-dark-blue");
+      body[0].classList.add("bg-ganyu-light-blue-2");
       body[0].classList.remove("bg-wanderer-teal");
       
 };  
@@ -92,7 +108,7 @@ function wandererTheme(){
     dateHeader[0].style.borderColor = "white";
 
     // Change main container color
-    mainContainer[0].classList.remove("bg-ganyu-pastel-blue");
+    mainContainer[0].classList.remove("bg-ganyu-pastel-blue-2");
     mainContainer[0].classList.add("bg-wanderer-light-purple");
 
     // Change background color of input rectangles
@@ -118,7 +134,7 @@ function wandererTheme(){
 
     // Change body  
     body[0].classList.add("bg-wanderer-teal");
-    body[0].classList.remove("bg-ganyu-dark-blue");  
+    body[0].classList.remove("bg-ganyu-light-blue-2");  
 };  
 
 function updateTheme(){
@@ -128,3 +144,8 @@ function updateTheme(){
         wandererTheme();
     }
 }
+
+// function editItem(itemId){
+//     const itemTitle = document.getElementById(itemId);
+//     const editItemInput = document.getElementById(editItemId)
+// }
