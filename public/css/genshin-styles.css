@@ -1,8 +1,37 @@
+.theme-ganyu-light{
+    --color-primary: #C0DBF2;
+    --color-secondary: #7B8DD5;
+    --color-accent: #C64D4F;
+    --color-accent-2: #F9EFC0;
+    --text-color: black;
+}
+
+.theme-ganyu-dark{
+
+}
+
+.theme-wanderer-light{
+    --color-primary: #C9C0F0;
+    --color-secondary: #3C5EB8;
+    --color-accent: #4797C0;
+    --color-accent-2: #F9EFC0;
+    --text-color: black;
+}
+
+.theme-wanderer-dark{
+    --color-primary: #cdc7f7;
+    --color-secondary: #224c94;
+    --color-accent: #72b5c5;
+    --color-accent-2: #feecc5;
+    --text-color: black;
+}
+
+
 /******************************************************************/
 /**********             Ganyu Color Theme              ************/
 /******************************************************************/
 /* Text Colors */
-.text-ganyu-light-blue{
+/* .text-ganyu-light-blue{
     color: 	#a4b6ef;
 }
 .text-ganyu-light-blue-2{
@@ -19,10 +48,10 @@
 }
 .text-ganyu-light-yellow{
     color: 	#feecc5;
-}
+} */
 
 /* Background Colors */
-.bg-ganyu-light-blue{
+/* .bg-ganyu-light-blue{
     background-color: #596cd5;
 }
 .bg-ganyu-light-blue-2{
@@ -42,14 +71,14 @@
 }
 .bg-ganyu-light-yellow{
     background-color: #feecc5;
-}
+} */
 
 
 /******************************************************************/
 /*******              Wanderer Color Theme               **** *****/
 /******************************************************************/
 /* Text Colors */
-.text-wanderer-teal{
+/* .text-wanderer-teal{
     color: #72b5c5;
 }
 .text-wanderer-light-purple{
@@ -60,10 +89,10 @@
 }
 .text-wanderer-beige{
     color: #fdd69c;
-}
+} */
 
 /* Background Colors */
-.bg-wanderer-teal{
+/* .bg-wanderer-teal{
     background-color: #72b5c5;
 }
 .bg-wanderer-light-purple{
@@ -74,4 +103,4 @@
 }
 .bg-wanderer-beige{
     background-color: #fdd69c;
-}
+} */

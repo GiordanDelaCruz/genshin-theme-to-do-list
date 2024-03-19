@@ -3,91 +3,89 @@
 <body class="">
     <!-- To-do List Menu -->
     <section>
-        <div class="container-fluid main-container py-5">
-            <div class="row">
-            <div class="col-lg-3">
-                      <!-- Other Menu -->
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button onclick="ganyuTheme()" type="button" class="btn bg-ganyu-light-blue text-white">Ganyu</button>
-                        <button onclick="wandererTheme()" type="button" class="btn bg-wanderer-teal text-white">Wanderer</button>
+        <div class="container main-container py-5">
+            <div class="row text-center">
+                <div class="col-lg-3">
+                    <!-- Other Menu -->
+                    <div class="btn-group" role="group">
+                        <button onclick="setTheme('theme-ganyu-light')" type="button" class="btn ganyu-btn theme-btn text-white zoom">Ganyu</button>
+                        <button onclick="setTheme('theme-wanderer-light')" type="button" class="btn wanderer-btn theme-btn text-white zoom">Wanderer</button>
+                </div>
+                </div>
+                    <div class="col-lg-6 offset-lg-3">
+                        <div class="character-quote-container">
+                            <p class="character-quote">
+                                "We're way behind schedule..."
+                            </p>
+                            <img class="chibi-character" src="" alt="">
+                        </div> 
                     </div>
-                </div>
-                <div class="col-lg-5 offset-lg-4">
-                    <div class="character-quote-container">
-                        <p class="character-quote">
-                            "We're way behind schedule..."
-                        </p>
-                        <img class="chibi-character" src="images/ganyu-chibi-4.png" alt="">
-                    </div> 
-                </div>
             </div>
             <div class="row text-center">
                 <div class="col-lg-12">
                     <!-- Regular Look -->
-                    <h1 class="date-header text-white bg-ganyu-light-red "> <%= currentDate %> </h1>
+                    <h1 class="date-header text-white"> <%= currentDate %> </h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-5">
-                    <!-- Menu to add items -->
+                    <!-- Options -->
                     <div class="menu-container text-center">
                         <h2 class="menu-header text-white">Options</h2>
-                        <img class="chibi-character" src="images/ganyu-chibi-3.png" alt="">
+                        <img class="chibi-character" src="" alt="">
                     </div>
-                    
+                    <!-- Add Item -->
                     <form action="/updatedList " method="POST">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <input class="btn input-group-text text-black" type="submit" name="" id="" value="Add">
+                                <button id="" class="btn add-item-btn input-group-text zoom">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>    
                             </div>
-                            <input type="text" class="form-control" name="itemTitle" placeholder="New Item"  required aria-label="Text input with checkbox">
+                            <input type="text" class="form-control" name="itemTitle" placeholder="Add new item"  required>
                         </div>
                     </form>
-
                     <!-- Clear list -->
                     <form action="/clearList" method="POST">
-                        <button class="btn text-black input-group-text" type="submit">Clear List</button>
+                        <button class="btn clear-list-btn input-group-text zoom" type="submit">Clear List</button>
                     </form>
-                   
                 </div>
                 <div class="col-lg-7">
                     <!-- Display list of current items -->
                     <div class="menu-container text-center">
                         <h2 class="menu-header text-white">To-do List</h2>
-                        <img class="chibi-character" src="images/ganyu-chibi-5.png" alt="">
+                        <img class="chibi-character" src="" alt="">
                     </div>
-                    
-                        <% if( locals.toDoList ){ %>
-                            <% for(let i =0; i < toDoList.length; i++){ %>
-                                <form method="post">
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <!-- Delete Task -->
-                                            <button id="delete-btn-<%= toDoList[i].id %>" formaction="/delete" type="submit" class="form-btn delete-btn input-group-text bg-danger text-white">
-                                                <i class="fa-solid fa-xmark"></i>
-                                            </button>
-                                            <!-- Complete Task -->
-                                            <button id="done-btn-<%= toDoList[i].id %>" formaction="/edit" type="submit" class="form-btn done-btn input-group-text bg-success text-white">
-                                                <i class="fa-solid fa-check"></i>
-                                            </button>
-                                            <!-- Edit Task -->
-                                            <button id="edit-btn-<%= toDoList[i].id %>" onclick="editItem('<%= toDoList[i].id %>')" type="button" class="form-btn edit-btn input-group-text">
-                                                <i class="fa-solid fa-pen-to-square"></i>
-                                            </button>
-                                        </div>
-                                       <!-- Item Properties -->
-                                       <input hidden name="itemId" value="<%= toDoList[i].id %>" >
-                                       <input id="edit-input-<%= toDoList[i].id %>" name="updatedTitle" type="text" class="form-control edit-input" value="<%= toDoList[i].title %>" required>
-                                       <label id="item-display-<%= toDoList[i].id %>" for="" class="form-control item-display"><%= toDoList[i].title %></label>
+                    <% if( locals.toDoList ){ %>
+                        <% for(let i =0; i < toDoList.length; i++){ %>
+                            <form method="post">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <!-- Delete Task -->
+                                        <button id="delete-btn-<%= toDoList[i].id %>" formaction="/delete" type="submit" class="form-btn delete-btn input-group-text bg-danger text-white zoom">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                        <!-- Complete Task -->
+                                        <button id="done-btn-<%= toDoList[i].id %>" formaction="/edit" type="submit" class="form-btn done-btn input-group-text bg-success text-white zoom">
+                                            <i class="fa-solid fa-check"></i>
+                                        </button>
+                                        <!-- Edit Task -->
+                                        <button id="edit-btn-<%= toDoList[i].id %>" onclick="editItem('<%= toDoList[i].id %>')" type="button" class="form-btn edit-btn input-group-text zoom">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
                                     </div>
-                                </form>
-                              
-                            <% } %>
+                                    <!-- Item Properties -->
+                                    <input hidden name="itemId" value="<%= toDoList[i].id %>" >
+                                    <input id="edit-input-<%= toDoList[i].id %>" name="updatedTitle" type="text" class="form-control edit-input" value="<%= toDoList[i].title %>" required>
+                                    <label id="item-display-<%= toDoList[i].id %>" for="" class="form-control item-display"><%= toDoList[i].title %></label>
+                                </div>
+                            </form>
+                        
                         <% } %>
+                    <% } %>
                 </div>
             </div>
         </div>
-
     </section>
 </body>
 
